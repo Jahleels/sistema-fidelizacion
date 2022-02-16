@@ -7,7 +7,7 @@ module.exports = {
     try {
       // console.log(req.body.correo)
       let user = await models.Usuario.findOne({
-        correo: req.body.name,
+        name: req.body.name,
       });
       if (user) {
         let match = await bcrypt.compare(req.body.password, user.password);
