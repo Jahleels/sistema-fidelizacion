@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "app.js --exec",
-    "dev": "nodemon app.js"
+    "start": "babel-node app.js --exec",
+    "dev": "nodemon app.js",
+    "devbabel": "nodemon app.js --exec babel-node"
   },
   "author": "jahleels20",
   "license": "ISC",
@@ -16,9 +17,7 @@
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.1",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
+    "morgan": "^1.10.0",
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.4",
     "@babel/node": "^7.16.8",
