@@ -35,11 +35,11 @@ module.exports = {
   add: async (req, res, next) => {
     try {
       let checkEmail = await models.Usuario.findOne({
-        correo: req.body.usuario,
+        name: req.body.name,
       });
       if (checkEmail) {
         res.status(404).send({
-          message: "El usuario ya existe",
+          message: "El usuario ya existe"
         });
       } else {
         req.body.password = await bcrypt.hash(req.body.password, 10);

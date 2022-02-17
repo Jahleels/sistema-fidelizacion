@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const urlDB = `mongodb+srv://jhll:JX5gprpKZmjVVNnC@cluster0.05awz.mongodb.net/project-101`;
-mongoose.connect(urlDB)
+mongoose.connect(urlDB, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(mongoose => console.log("DB conectada"))
 .catch(err => console.log(err))
 
