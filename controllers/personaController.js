@@ -5,7 +5,6 @@ module.exports = {
         try {
             const listPersonas = await models.Persona.find({});
             res.status(200).json(listPersonas); 
-            console.log(listPersonas)
         } catch( err ) {
             res.status(500).json({msg: `Ocurrió un error ${err}`});
         }

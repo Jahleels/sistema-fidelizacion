@@ -16,7 +16,7 @@ module.exports = {
         try {
             const listBarrios = await models.Municipios.find({}, {barrios:1, _id:0});
             let barrioArray = listBarrios[0].barrios;
-            res.status(200).send(barrioArray);
+            res.status(200).send(barrioArray.sort());
         } catch (err) {
             res.status(500).send({msg: err});
         }
