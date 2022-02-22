@@ -6,7 +6,7 @@ module.exports = {
             const listMunicipios = await models.Municipios.find({}, {municipio:1, _id:0});
             let municipios = []
             listMunicipios.forEach(listMunicipios => municipios.push(listMunicipios.municipio))
-            res.status(200).send(municipios);
+            res.status(200).send(municipios.sort());
         } catch (err) {
             res.status(500).send({msg: err});
         }
