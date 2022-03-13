@@ -16,5 +16,5 @@ const personaSchema = new Schema({
     user:String
 });
 
-const Persona = mongoose.model('persona', personaSchema);
+const Persona = mongoose.model('personasfinal', personaSchema);
 module.exports = Persona; 
